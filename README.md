@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Project Title: Anime API Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Anime API Frontend repository! This project serves as the frontend of a full stack application, providing a user interface to interact with APIs for three popular anime series: Attack on Titan, My Hero Academia, and Jujutsu Kaisen. The frontend is built using React.js and integrates with a Django backend for user authentication and data representation.
+
+## Table of Contents
+
+- [Project Description](#project-description)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Available Scripts](#available-scripts)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Project Description
+
+This repository contains the frontend code for a full stack application, featuring a user interface to display data from the APIs of three renowned anime series. The frontend is built with React.js and communicates with the Django backend for user authentication and data fetching. The goal is to provide an interactive and user-friendly interface for anime enthusiasts to explore characters and episodes from Attack on Titan, My Hero Academia, and Jujutsu Kaisen.
+
+## Features
+
+- **React.js**: Utilizes React for building a dynamic and responsive user interface.
+- **User Authentication**: Integration with Django backend for user authentication using JWT.
+- **API Integration**: Fetches data from backend APIs and displays it on the frontend.
+- **Modular Components**: Clean and reusable React components.
+- **Routing**: Client-side routing with React Router.
+- **State Management**: Manages state using React hooks and context API.
+
+## Installation
+
+To get a local copy up and running, follow these simple steps.
+
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/your_username/anime-api-frontend.git
+   ```
+2. **Navigate to the project directory**
+   ```sh
+   cd anime-api-frontend
+   ```
+3. **Install dependencies**
+   ```sh
+   npm install
+   ```
+4. **Create a `.env` file in the root directory and add the following environment variables**
+   ```
+   REACT_APP_API_BASE_URL=http://127.0.0.1:8000/api
+   ```
+
+## Usage
+
+To start the development server and run the application locally, use the following command:
+```sh
+npm start
+```
+This will run the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Folder Structure
+
+The project structure is organized as follows:
+
+```
+anime-api-frontend/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── AttackOnTitan/
+│   │   ├── MyHeroAcademia/
+│   │   ├── JujutsuKaisen/
+│   │   ├── Authentication/
+│   │   └── Common/
+│   ├── context/
+│   ├── hooks/
+│   ├── pages/
+│   ├── services/
+│   ├── App.js
+│   ├── index.js
+│   └── routes.js
+├── .env
+├── package.json
+└── README.md
+```
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+- **`npm start`**: Runs the app in development mode.
+- **`npm build`**: Builds the app for production to the `build` folder.
+- **`npm test`**: Launches the test runner in interactive watch mode.
+- **`npm eject`**: Ejects the app from Create React App configuration.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Contributing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-### `npm test`
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/YourFeature`)
+3. Commit your Changes (`git commit -m 'Add some YourFeature'`)
+4. Push to the Branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## License
 
-### `npm run build`
+Distributed under the MIT License. See `LICENSE` for more information.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for visiting the Anime API Frontend repository! If you have any questions, feel free to open an issue or reach out to the maintainers. Enjoy exploring the application!
