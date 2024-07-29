@@ -1,26 +1,26 @@
-// src/Attack.js
+// src/MyHero.js
 
 import React, { Component } from "react";
-import SimpleCard from './components/SimpleCard';
+import SimpleCard from './SimpleCard';
 
-class Attack extends Component {
+class JujutsuKaisen extends Component {
   constructor(props) {
     super(props);
     this.state = {
       error: null,
-      titans: [],
+      curses: [],
       isLoaded: false,
     };
   }
 
   componentDidMount() {
-    fetch('http://127.0.0.1:8000/aot/')
+    fetch('http://127.0.0.1:8000/jjk/')
       .then(res => res.json())
       .then(
         (result) => {
           this.setState({
             isLoaded: true,
-            titans: result,
+            curses: result,
           });
         },
         (error) => {
@@ -33,7 +33,7 @@ class Attack extends Component {
   }
 
   render() {
-    const { error, isLoaded, titans } = this.state;
+    const { error, isLoaded, curses } = this.state;
 
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -43,13 +43,13 @@ class Attack extends Component {
       return (
         <div className="container mt-5">
           <div className="row">
-            {titans.map(titan => (
-              <div key={titan.id} className="col-md-4">
+            {curses.map(curse => (
+              <div key={curse.id} className="col-md-4">
                 <SimpleCard
-                  image={titan.image}
-                  name={titan.name}
-                  status={titan.status}
-                  ability={titan.ability}
+                  image={curse.image}
+                  name={curse.name}
+                  status={curse.status}
+                  ability={curse.ability}
                 />
               </div>
             ))}
@@ -60,4 +60,4 @@ class Attack extends Component {
   }
 }
 
-export default Attack;
+export default JujutsuKaisen;

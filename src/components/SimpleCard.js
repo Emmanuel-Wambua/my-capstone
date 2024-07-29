@@ -11,7 +11,7 @@ function SimpleCard({ image, name, status, ability }) {
   };
 
   const imgStyle = {
-    height: '200px',
+    height: '300px',
     objectFit: 'cover',
   };
 
@@ -19,7 +19,7 @@ function SimpleCard({ image, name, status, ability }) {
     <div className="card" style={cardStyle}>
       <img src={image} className="card-img-top" alt={name} style={imgStyle} />
       <div className="card-body">
-        <h2 className="card-title">{name}</h2>
+        <strong><p className="card-title">{name}</p></strong>
         <h4 className="card-subtitle mb-2 text-muted">{status}</h4>
         <p className="card-text">{ability}</p>
       </div>
