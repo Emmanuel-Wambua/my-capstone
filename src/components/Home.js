@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import downloadImage from '../download (6).jfif';
-// import styles from './Home.module.scss';
+import styles from './Home.module.scss';
 
 function Home() {
+
+  useEffect(() => {
+    // Disable scroll when Home mounts
+    document.body.style.overflow = 'hidden';
+
+    // Re-enable scroll when leaving Home
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   return (
     <div
       style={{

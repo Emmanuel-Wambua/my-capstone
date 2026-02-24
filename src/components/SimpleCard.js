@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function SimpleCard({ image, name, status, ability }) {
   const cardStyle = {
+    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)',
     width: '100%', // Let the card take full width of the column
     marginBottom: '1rem',
   };
