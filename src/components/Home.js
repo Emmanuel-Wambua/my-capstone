@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import downloadImage from '../download (6).jfif';
 
 function Home() {
