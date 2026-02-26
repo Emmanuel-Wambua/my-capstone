@@ -14,7 +14,7 @@ class Attack extends Component {
   }
 
   componentDidMount() {
-    fetch('http://127.0.0.1:8000/aot/')
+    fetch('https://full-stack-2-gi0c.onrender.com/aot/')
       .then(res => res.json())
       .then(
         (result) => {
